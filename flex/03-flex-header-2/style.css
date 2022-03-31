@@ -11,15 +11,37 @@ body {
 .header {
   background: white;
   border-bottom: 1px solid #ddd;
-  box-shadow: 0 0 8px rgba(0,0,0,.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, .1);
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; en la solucion lo centra en los leftSide rightSide */ 
+  padding: 8px;
 }
+
+/*Comparten las mismas propiedas las dos clases de abajo, deberia de haber agrupado las dos clases con una , de separacion.*/
+
+.leftSideHeader {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.rightSideHeader {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+/* .links {
+  display: flex;
+} esto esta de mas, tengo que inspeccionar mejor los elementos para eliminar propiedades innecesarias */
 
 .profile-image {
   background: rebeccapurple;
-  box-shadow: inset 2px 2px 4px rgba(0,0,0,.5);
+  box-shadow: inset 2px 2px 4px rgba(0, 0, 0, .5);
   border-radius: 50%;
   width: 48px;
-  height:  48px;
+  height: 48px;
 }
 
 .logo {
@@ -41,8 +63,15 @@ a {
   /* this removes the line under our links */
   text-decoration: none;
   color: rebeccapurple;
+
 }
 
 ul {
+  display: flex;
   list-style-type: none;
+  gap: 16px;
+  /*me faltaba setear la propiedad margin en 0*/
+  padding: 0; 
+  margin: 0;
+
 }
