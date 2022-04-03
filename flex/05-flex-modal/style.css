@@ -8,18 +8,33 @@ body {
   font-family: Roboto, sans-serif;
   margin: 0;
   background: #aaa;
-  color: #333;
+  color: #333;  
   /* I'll give you this one for free lol */
   display: flex;
   align-items: center;
   justify-content: center;
+  
+}
+.header {
+  font-weight: 900;
+  font-size: 18px;
 }
 
 .modal {
   background: white;
   width: 480px;
   border-radius: 10px;
-  box-shadow: 2px 4px 16px rgba(0,0,0,.2);
+  box-shadow: 2px 4px 16px rgba(0,0,0,.2);    
+  padding: 16px;
+  display: flex;  
+  gap: 16px;
+}
+.rightSide{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;  
+  gap:10px;
+  flex:1 6 auto;  
 }
 
 .icon {
@@ -33,6 +48,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-start;   
+  /* flex: 6 1 auto;  Intentaba hacer crecer el elemento para que pudiera mostrarse bien*/
+  flex-shrink: 0; 
 }
 
 .close-button {
@@ -46,6 +64,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  align-self: flex-end;
+}
+
+.buttons{
+  display: flex;
+  gap: 5px;
 }
 
 button {
@@ -64,3 +88,10 @@ button.cancel {
   border: 1px solid #ddd;
   color: royalblue;
 }
+.text {
+margin-bottom: 6px;
+} 
+  /* 
+  font-weight: 500;
+  font-size: medium;
+ esto no era necesario, estaba confundido con la imagen (desired outcomes)*/
